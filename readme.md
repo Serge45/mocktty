@@ -1,9 +1,9 @@
 ## Introduction
-Fake tty device by using pyserial
+Mock tty device by using pyserial
 
 ## Usage
  - `pip install -r requirements.txt`
- - python3 mocktty.py
+ - `python3 mocktty.py`
 
  console will print the name of created tty device, and then you can 
   - send bytes to client via stdin, e.g. `'\xF0\x00\xF7'`
