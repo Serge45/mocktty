@@ -2,6 +2,7 @@ import os
 import pty
 import serial
 import codecs
+import binascii
 import threading as mt
 
 def main():
@@ -23,7 +24,7 @@ def main():
             r = os.read(master, 256)
 
             if (len(r)):
-                print('Bytes received: {}'.format(r))
+                print('Bytes received: {}'.format(binascii.hexlify(r)))
 
     reader_thread = mt.Thread(target=reader_func)
     reader_thread.start()
